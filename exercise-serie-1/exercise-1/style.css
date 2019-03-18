@@ -1,1 +1,16 @@
-/*Use the .scss file instead!*/
+button {
+  width: 200px;
+  height: 100px;
+  background: black;
+  color: white;
+}
+
+
+
+#square {
+  height: 200px;
+  width: 200px;
+  background-color: black;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -13,25 +13,44 @@
     <!--Link to your stylesheet-->
     <link rel="stylesheet" href="style.css">
     
-    <title>Exercise ... : ...</title>
+    <title>1.1 - Color selector</title>
 
 </head>
 <body>
     
-    <h1 class="text-center my-5"><i class="fas fa-cat"></i> This is a template <i class="fas fa-cat"></i></h1>
+    <h1 class="text-center my-5"><i class="fas fa-cat"></i> Color selector <i class="fas fa-cat"></i></h1>
 
 
-    <div class="container my-5 py-5 bg-white text-success">
+    <div class="container my-5 py-5 bg-white text-success ">
+        <div class = "row d-flex justify-content-between ml-3 mr-3">
+            
+            <div class="col-md-4 d-flex flex-column align-items-center">
+                <button onclick="buttonStyle('blue')" class="button" id = "blue">
+                    <h2 class = "text-b" >Blue</h2> 
+                </div>
+            <div class="col-md-4 d-flex flex-column align-items-center">
+                <button onclick="buttonStyle('red')" class="button" id = "red">
+                    <h2 class = "text-b" >Red</h2> 
+            </div>
 
-        
+            <div class="col-md-4 d-flex flex-column align-items-center">
+                <button onclick="buttonStyle('green')" class="button" id ="green"> 
 
+                <h2 class = "text-b" >Green</h2> 
+            </div>
+                
 
-        <!-- PLACE YOUR CONTENT HERE-->
+        </div>
 
+        <div class = "row d-flex justify-content-center mt-5">
+            <div id = "square">
 
-
-
+            </div>
+        </div>
+            
     </div>
+
+    
 
 
     <!--Bootstrap & Jquery scripts-->
