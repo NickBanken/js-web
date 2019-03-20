@@ -1,1 +1,8 @@
 /*Use the .scss file instead!*/
+
+.col-md-12{height: 100vh; position: relative;}
+.btn{position: absolute};
+
+span{background-color:black;
+height: 100%;
+width: 100%;}
