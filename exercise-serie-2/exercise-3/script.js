@@ -1,61 +1,40 @@
 //Check to see if script is linked properly.
 console.log("This script is linked properly!")
 let score = 0;
-let isAnim = false;
 let cookie = document.getElementById('cookie');
+let multiB = document.getElementById("multiply");
+let counter = document.getElementById('counter');
 let mouseDown = false
+
+let scoreAdd = 1;
+let multiMin = 50;
 
 //Write your JS code here...
 
+multiB.disabled = true;
 
 
  function clickCookie(){
      
-     score++;
+  score = score + scoreAdd;
 
-     let counter = document.getElementById('counter');
-     counter.textContent = score;
-     
-   /*   //retrieve cookie
-   
+ 
+  counter.textContent = score;
+  
+  
+  // multiply when
+  if(score >= multiMin){
+    multiB.classList.remove("disabled");
+    multiB.disabled = false; }
+ }
 
 
-    document.body.onmousedown = function() { 
-      cookie.classList.remove("heartbeat-up")
-      cookie.classList.add("bump-in")
-      cookie.addEventListener("animationend", function() {
-        cookie.classList.remove("bump-in")
-        cookie.classList.add("heartbeat-down")
-      })  
-    } */
-    
-    /* document.body.onmouseup = function() {
-
-     cookie.classList.remove("heartbeat-down")
-    cookie.classList.add("bump-out")
-    cookie.addEventListener("animationend", function() {
-      cookie.classList.add("heartbeat-up")
-    })  
-      
-      
-    } */
-
-  /*   // OnEach click, play this animation, but only when the animation finishes.
-    cookie.addEventListener("click", function() {
-        ;
-     });
-     cookie.addEventListener("animationend", function() {
-       
-     }) */
-        
-        /* cookie.classList.remove("bump");
-
-        void cookie.offsetWidth;
-        
-        cookie.classList.add('bump');
-        setTimeout('', 1000);
-        isAnim = false; */
-    
-    
-
+ function multiply(){
+  multiB.disabled = true;
+  score -= multiMin;
+  multiMin = Math.floor(multiMin * 1.5);
+  scoreAdd = scoreAdd *2;
+  counter.textContent = score;
+  multiB.classList.add("disabled"); 
+  
  }
